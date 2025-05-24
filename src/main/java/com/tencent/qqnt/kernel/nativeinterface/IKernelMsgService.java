@@ -41,5 +41,9 @@ public interface IKernelMsgService {
     void forwardMsg(ArrayList<Long> msgIds, Contact srcContact, ArrayList<Contact> dstContacts, HashMap<Integer, MsgAttributeInfo> hashMap, IForwardOperateCallback callback);
     void forwardMsg(ArrayList<Long> msgIds, com.tencent.qqnt.kernelpublic.nativeinterface.Contact srcContact, ArrayList<com.tencent.qqnt.kernelpublic.nativeinterface.Contact> dstContacts, HashMap<Integer, MsgAttributeInfo> hashMap, IForwardOperateCallback callback);
 
+    void addLocalRecordMsg(com.tencent.qqnt.kernelpublic.nativeinterface.Contact contact, long j3, MsgElement msgElement, HashMap<Integer, MsgAttributeInfo> hashMap, boolean z16, IOperateCallback iOperateCallback);
+    void addLocalRecordMsg(Contact contact, long j3, MsgElement msgElement, HashMap<Integer, MsgAttributeInfo> hashMap, boolean z16, IOperateCallback iOperateCallback);
 
+    void addSendMsg(long j3, Contact contact, ArrayList<MsgElement> arrayList, HashMap<Integer, MsgAttributeInfo> hashMap);
+    void addSendMsg(long j3, com.tencent.qqnt.kernelpublic.nativeinterface.Contact peer, ArrayList<MsgElement> arrayList, HashMap<Integer, MsgAttributeInfo> hashMap);
 }
